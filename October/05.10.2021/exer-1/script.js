@@ -312,3 +312,10 @@ print(bar("Cat")) // --> "Catt"
 print(bar("Foobar")) // --> "Catobar"
 print(bar("Potato")) // --> "Cattato"
 print(bar("Tomato")) // --> "Catmato"
+
+
+export function printing() {
+    print()
+    println()
+    printDashes()
+};
