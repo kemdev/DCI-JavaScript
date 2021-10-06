@@ -326,7 +326,7 @@ println()
 
 
 
-function validateEmail(email) {
+function validate(email) {
     // The string must contain exactly one "@" character
     // The string must contain at least one "." character
     if (!email.includes('@') || countOccurrences(email, '@') > 1 || !email.includes('.')) return "Please check you input, your email should contain one '@' and '.'";
@@ -346,12 +346,22 @@ function validateEmail(email) {
 }
 
 
-print(validateEmail('email@.'))
-print(validateEmail('email@.main'))
-print(validateEmail('email..Kart@main'))
-print(validateEmail('@example.com')) // invalid
-print(validateEmail("j@example.com")) // -> valid 
-print(validateEmail("john.smith@com")) // -> invalid
-print(validateEmail("john..smith@email.com")) // -> invalid
-print(validateEmail("john.@email.com")) // -> invalid
-print(validateEmail("john@.email.com")) // -> invalid
+// print(validateEmail('email@.'))
+// print(validateEmail('email@.main'))
+// print(validateEmail('email..Kart@main'))
+// print(validateEmail('@example.com')) // invalid
+// print(validateEmail("j@example.com")) // -> valid 
+// print(validateEmail("john.smith@com")) // -> invalid
+// print(validateEmail("john..smith@email.com")) // -> invalid
+// print(validateEmail("john.@email.com")) // -> invalid
+// print(validateEmail("john@.email.com")) // -> invalid
+
+
+console.log(validate("j@example.com"));
+console.log(validate("@example.com)"));
+console.log(validate("john.smith@com"));
+console.log(validate("john.smith@email.com"));
+console.log(validate("personal.@fran.borg"));
+console.log(validate("jennaIsAwesome@..mail.com"));
+console.log(validate("hereComes...jenna@mail.com"));
+console.log(validate("lastOne@orIsIt.com."));
