@@ -183,7 +183,8 @@ println()
 let cleanArray = array => {
     let result = []
     array.forEach(element => {
-        if (typeof element === 'number' && !isNaN(element) && element !== 0) result.push(element)
+        // if (typeof element === 'number' && !isNaN(element) && element !== 0) result.push(element)
+        if (element) result.push(element)
     });
     return result
 }
